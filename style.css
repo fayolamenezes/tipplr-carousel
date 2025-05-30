@@ -1,0 +1,16 @@
+.rounded-4xl {
+  border-radius: 40px;
+}
+
+.swiper {
+  height: auto;
+}
+
+.swiper-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+  box-sizing: border-box;
+}
+
