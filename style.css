@@ -1,3 +1,19 @@
+.only-mobile {
+  display: block;
+}
+.only-desktop {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .only-mobile {
+    display: none !important;
+  }
+  .only-desktop {
+    display: flex !important;
+  }
+}
+
 .rounded-4xl {
   border-radius: 40px;
 }
@@ -12,5 +28,39 @@
   justify-content: flex-start;
   height: 100%;
   box-sizing: border-box;
+}
+
+.food-bowl-desktop {
+  position: absolute;
+  bottom: -30%;
+  left: 67%;
+  transform: translateX(-50%) rotate(-1deg);
+  width: 27rem;
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* Allow overflow */
+.swiper,
+.swiper-wrapper,
+.swiper-slide {
+  overflow: visible !important;
+}
+
+/* Position food bowl visually above slides */
+.food-bowl-overlap-swiper {
+  position: absolute;
+  bottom: -8.5rem; /* adjust as needed */
+  left: 135%;
+  transform: translateX(25%) rotate(-3deg);
+  width: 580px;
+  pointer-events: none;
+  z-index: 50;
+}
+
+@media (min-width: 1024px) {
+  .food-bowl-overlap-swiper {
+    display: none;
+  }
 }
 
