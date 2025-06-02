@@ -1,4 +1,3 @@
-// Ensure Swiper is loaded from CDN before this script runs
 document.addEventListener("DOMContentLoaded", () => {
   const swiper = new Swiper(".mySwiper", {
     loop: true,
@@ -17,6 +16,17 @@ document.addEventListener("DOMContentLoaded", () => {
       1024: {
         slidesPerView: 3,
         spaceBetween: 30,
+      },
+    },
+    on: {
+      slideChange: function () {
+        const bowl = document.querySelector(".food-bowl-overlap-swiper");
+        // Adjust index for loop mode: realIndex is the original slide index
+        if (swiper.realIndex === 1 || swiper.realIndex === 2) {
+          bowl.classList.remove("hidden");
+        } else {
+          bowl.classList.add("hidden");
+        }
       },
     },
   });
