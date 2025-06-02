@@ -44,7 +44,7 @@
 .swiper,
 .swiper-wrapper,
 .swiper-slide {
-  overflow: visible !important;
+  overflow: visible;
 }
 
 /* Position food bowl visually above slides */
