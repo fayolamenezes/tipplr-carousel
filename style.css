@@ -18,7 +18,6 @@
   justify-content: flex-start;
   height: 100%;
   box-sizing: border-box;
-  padding: 1rem;
 }
 
 .food-bowl-desktop {
@@ -34,44 +33,16 @@
 .food-bowl-overlap-swiper {
   position: absolute;
   bottom: -7.5rem;
-  left: 50%;
-  transform: translateX(-50%) rotate(-3deg);
-  width: 90vw;
-  max-width: 550px;
+  left: 135%;
+  transform: translateX(25%) rotate(-3deg);
+  width: 880px;
   pointer-events: none;
   z-index: 50;
 }
 
-/* Hide swiper overlap image on large screens */
 @media (min-width: 1024px) {
   .food-bowl-overlap-swiper {
     display: none;
-  }
-}
-
-/* Improve layout on smaller screens */
-@media (max-width: 768px) {
-  .swiper-slide {
-    padding: 1rem;
-  }
-
-  .food-bowl-overlap-swiper {
-    bottom: -5rem;
-    width: 95vw;
-  }
-
-  .swiper .swiper-pagination-progressbar {
-    margin-top: 3rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .swiper-slide h4 {
-    font-size: 1.75rem;
-  }
-
-  .swiper-slide p {
-    font-size: 0.875rem;
   }
 }
 
