@@ -4,48 +4,53 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Carousel</title>
+
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="style.css" />
+
+  <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body class="bg-[#7527f4] text-white font-sans">
-  <section class="p-6">
+  <section class="p-6 max-w-7xl mx-auto">
     <h2 class="text-center text-4xl font-bold mb-4">
       The <span class="text-6xl lg:text-9xl text-white">ONDC</span> Advantage
     </h2>
 
     <!-- MOBILE SWIPER -->
     <div class="swiper mySwiper only-mobile min-h-[450px] relative">
-      <div class="swiper-wrapper relative">
+      <div class="swiper-wrapper">
 
-        <!-- Slide 1 (no food bowl) -->
-        <div class="swiper-slide bg-white/80 rounded-3xl shadow text-[#7527f4] flex flex-col max-w-md w-full h-full p-6 mx-auto min-h-[450px]">
+        <!-- Slide 1 -->
+        <div class="swiper-slide bg-white/80 rounded-3xl shadow text-[#7527f4] p-6 min-h-[450px]">
           <h4 class="text-4xl font-semibold mb-2">Broader Reach, More Orders</h4>
           <p class="text-sm">ONDC integration means your menu appears on multiple buyer apps—not just Tipplr...</p>
         </div>
 
         <!-- Slide 2 -->
-        <div class="swiper-slide bg-white rounded-3xl shadow text-[#4c4c4c] flex flex-col max-w-md w-full h-full p-6 mx-auto min-h-[450px]">
+        <div class="swiper-slide bg-white rounded-3xl shadow text-[#4c4c4c] p-6 min-h-[450px]">
           <h4 class="text-4xl font-semibold mb-2">A Fairer Marketplace</h4>
           <p class="text-sm">With ONDC, we’re helping build a food delivery ecosystem...</p>
         </div>
 
         <!-- Slide 3 -->
-        <div class="swiper-slide bg-white/80 rounded-3xl shadow text-[#7527f4] flex flex-col max-w-md w-full h-full p-6 mx-auto min-h-[450px]">
+        <div class="swiper-slide bg-white/80 rounded-3xl shadow text-[#7527f4] p-6 min-h-[450px]">
           <h4 class="text-4xl font-semibold mb-2">Built for the Future</h4>
           <p class="text-sm">Thanks to ONDC’s cutting-edge tech, Tipplr is built to scale...</p>
         </div>
-
-        <!-- Food bowl image overlapping slide 2 and 3 -->
       </div>
-      <img src="food bowl.png" alt="Food Bowl" class="food-bowl-overlap-swiper" />
 
+      <!-- Overlapping image -->
+      <img src="food bowl.png" alt="Food Bowl" class="food-bowl-overlap-swiper hidden" />
+
+      <!-- Pagination -->
       <div class="swiper-pagination mt-4"></div>
     </div>
 
     <!-- DESKTOP CARDS -->
-    <div class="only-desktop justify-center gap-6 mt-6 relative">
+    <div class="only-desktop flex justify-center gap-6 mt-6 relative">
       <div class="bg-white/80 p-10 rounded-4xl shadow text-[#7527f4] min-h-[450px] flex flex-col max-w-sm w-full">
         <h4 class="text-5xl font-bold mb-2">Broader Reach, More Orders</h4>
         <p class="text-base">ONDC integration means your menu appears on multiple buyer apps—not just Tipplr...</p>
@@ -56,6 +61,7 @@
         <p class="text-base">With ONDC, we’re helping build a food delivery ecosystem...</p>
       </div>
 
+      <!-- Desktop overlapping image -->
       <img src="food bowl.png" alt="Food Bowl" class="food-bowl-desktop" />
 
       <div class="bg-white/80 p-10 rounded-4xl shadow text-[#7527f4] min-h-[450px] flex flex-col max-w-sm w-full">
@@ -65,8 +71,8 @@
     </div>
   </section>
 
+  <!-- Swiper JS -->
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="script.js"></script>
-
 </body>
 </html>

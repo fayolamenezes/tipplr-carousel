@@ -19,15 +19,22 @@ document.addEventListener("DOMContentLoaded", () => {
       },
     },
     on: {
+      init: function () {
+        toggleBowlVisibility(this.realIndex);
+      },
       slideChange: function () {
-        const bowl = document.querySelector(".food-bowl-overlap-swiper");
-        // Adjust index for loop mode: realIndex is the original slide index
-        if (swiper.realIndex === 1 || swiper.realIndex === 2) {
-          bowl.classList.remove("hidden");
-        } else {
-          bowl.classList.add("hidden");
-        }
+        toggleBowlVisibility(this.realIndex);
       },
     },
   });
+
+  function toggleBowlVisibility(index) {
+    const bowl = document.querySelector(".food-bowl-overlap-swiper");
+    if (!bowl) return;
+    if (index === 1 || index === 2) {
+      bowl.classList.remove("hidden");
+    } else {
+      bowl.classList.add("hidden");
+    }
+  }
 });
