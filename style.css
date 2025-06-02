@@ -1,7 +1,7 @@
-/* Visibility Toggles */
 .only-mobile {
   display: block;
 }
+
 .only-desktop {
   display: none;
 }
@@ -15,19 +15,12 @@
   }
 }
 
-/* Custom Rounded Corner */
 .rounded-4xl {
   border-radius: 40px;
 }
 
-/* Swiper Styles */
 .swiper {
   height: auto;
-  overflow: visible;
-}
-
-.swiper-wrapper {
-  overflow: visible;
 }
 
 .swiper-slide {
@@ -36,10 +29,8 @@
   justify-content: flex-start;
   height: 100%;
   box-sizing: border-box;
-  overflow: visible;
 }
 
-/* Food Bowl Positioning – Desktop */
 .food-bowl-desktop {
   position: absolute;
   bottom: -30%;
@@ -50,7 +41,14 @@
   z-index: 10;
 }
 
-/* Food Bowl Positioning – Overlapping Swiper */
+/* Allow overflow */
+.swiper,
+.swiper-wrapper,
+.swiper-slide {
+  overflow: visible !important;
+}
+
+/* Position food bowl visually above slides */
 .food-bowl-overlap-swiper {
   position: absolute;
   bottom: -8.5rem; /* adjust as needed */
