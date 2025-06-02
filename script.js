@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     spaceBetween: 20,
     pagination: {
       el: ".swiper-pagination",
-      clickable: true,
+      type: "progressbar",
     },
     autoplay: {
       delay: 5000,
