@@ -35,7 +35,7 @@
   bottom: -8.5rem;
   left: 135%;
   transform: translateX(25%) rotate(-3deg);
-  width: 580px;
+  width: 780px;
   pointer-events: none;
   z-index: 50;
 }
