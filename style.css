@@ -18,6 +18,7 @@
   justify-content: flex-start;
   height: 100%;
   box-sizing: border-box;
+  padding: 1rem;
 }
 
 .food-bowl-desktop {
@@ -33,21 +34,49 @@
 .food-bowl-overlap-swiper {
   position: absolute;
   bottom: -7.5rem;
-  left: 135%;
-  transform: translateX(25%) rotate(-3deg);
-  width: 880px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-3deg);
+  width: 90vw;
+  max-width: 550px;
   pointer-events: none;
   z-index: 50;
 }
 
+/* Hide swiper overlap image on large screens */
 @media (min-width: 1024px) {
   .food-bowl-overlap-swiper {
     display: none;
   }
 }
 
+/* Improve layout on smaller screens */
+@media (max-width: 768px) {
+  .swiper-slide {
+    padding: 1rem;
+  }
+
+  .food-bowl-overlap-swiper {
+    bottom: -5rem;
+    width: 95vw;
+  }
+
+  .swiper .swiper-pagination-progressbar {
+    margin-top: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .swiper-slide h4 {
+    font-size: 1.75rem;
+  }
+
+  .swiper-slide p {
+    font-size: 0.875rem;
+  }
+}
+
 .swiper .swiper-pagination-progressbar {
-  background:#ffff !important;
+  background: #ffff !important;
   height: 9px !important;
   border-radius: 4px;
   overflow: hidden;
@@ -56,7 +85,7 @@
 }
 
 .swiper .swiper-pagination-progressbar-fill {
-  background:#ff6514 !important;
+  background: #ff6514 !important;
   height: 100%;
   width: 0;
   transition: width 0.3s ease;
@@ -70,9 +99,11 @@
   top: 0;
   border-left: 1px solid rgba(255, 255, 255, 0.3);
 }
+
 .swiper .swiper-pagination-progressbar::before {
   left: 33.33%;
 }
+
 .swiper .swiper-pagination-progressbar::after {
   left: 66.66%;
 }

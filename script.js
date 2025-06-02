@@ -1,4 +1,3 @@
-// Ensure Swiper is loaded from CDN before this script runs
 document.addEventListener("DOMContentLoaded", () => {
   const swiper = new Swiper(".mySwiper", {
     loop: true,
